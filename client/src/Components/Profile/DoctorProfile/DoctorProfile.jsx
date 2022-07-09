@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLinkClickHandler, useLocation, useParams } from "react-router-dom";
 import styles from "./DoctorProfile.module.css"
 import LineChart from "../../Chart/LineChart/Linechart/LineChart";
@@ -11,6 +11,10 @@ const DoctorProfile=(props)=>{
     const user=useContext(UserContext)
     const params=useParams();
     let id=params.id
+    let [text,setText]=useState({
+        text:"Pending",
+        click:0
+    })
     // useEffect(()=>{
     //     // get request from database
     //     console.log(id);
@@ -91,16 +95,24 @@ const DoctorProfile=(props)=>{
     const location=useLocation();
     let path=location.pathname
     let ID=1
+    const statusHandler=(id,e)=>{
+        console.log(id);
+        let temp=e.target.innerText
+        setText({
+                text:temp,
+                click:1
+        })
+    }
     
-    const list1=[
+    const demolist=[
         {
             id:7,
             name:"Shanto",
             date:"4/4/22",
             time:"5.20PM",
             medicalHistory:"History",
-            payment:"$100",
-            status:"Paid"
+            payment:"$100"
+           
         },
         {
             id:5,
@@ -108,8 +120,8 @@ const DoctorProfile=(props)=>{
             date:"4/4/22",
             time:"5.20PM",
             medicalHistory:"History",
-            payment:"$100",
-            status:"Paid"
+            payment:"$100"
+           
         },
         {
             id:9,
@@ -117,10 +129,21 @@ const DoctorProfile=(props)=>{
             date:"4/4/22",
             time:"5.20PM",
             medicalHistory:"History",
-            payment:"$100",
-            status:"Paid"
+            payment:"$100"
+            
         }
     ]
+    const list1=demolist.map(el=>{
+        let temp={...el,status:<div className={styles.status}  > 
+            <div className={styles.text}>{text.text}</div>
+          { text.click==0?<div className={styles.state}>
+                 <div className={styles.done} onClick={(e)=>statusHandler(el.id,e)}>Done</div>
+            <div className={styles.reject} onClick={(e)=>statusHandler(el.id,e)}>Reject</div>
+            </div>:null}
+           
+         </div>}
+        return temp
+    })
     return(
         <div className={styles.container}>
           <ProfileImage person={doctor}/>

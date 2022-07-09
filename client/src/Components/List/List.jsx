@@ -4,6 +4,7 @@ import styles from "./List.module.css"
 const List=(props)=>{
     const location=useLocation();
     let path=location.pathname;
+    
     return(
         <div className={styles.container}>
             <div className={styles.text}>
@@ -20,7 +21,7 @@ const List=(props)=>{
                     </tr>
                     {props.list.map((el,id)=>{
                         return(
-                            <tr onClick={()=>props.clicked(el.id)} className={id%2?styles.row1:styles.row} key={id}>
+                            <tr  className={id%2?styles.row1:styles.row} key={id}>
                                 
                               {Object.entries(el).map((el1,id)=>{
                                   return(

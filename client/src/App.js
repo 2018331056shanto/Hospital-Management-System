@@ -62,8 +62,7 @@ function App() {
         <Routes>
           <Route path="/" exect element={<LandingPage/>}/>
           <Route path="/patient" exact element={<PateintPage />} />
-          <Route path="/doctor" exact element={<LoginPage data={dataHandler}/>} />
-          <Route path="/employee" exact element={<LoginPage data={dataHandler}/>} />
+          <Route path="/login" exact element={<LoginPage data={dataHandler}/>} />
           <Route path="/admin" element={<> <Admin/>,<Wraper ><Dashboard/></Wraper></>} />
           <Route path="admin/dashboard" exact element={<> <Admin/>,<Wraper ><Dashboard/></Wraper></>} />
           <Route path="admin/doctor" exect element={<> <Admin/>,<Wraper ><Doctor/></Wraper></>} />

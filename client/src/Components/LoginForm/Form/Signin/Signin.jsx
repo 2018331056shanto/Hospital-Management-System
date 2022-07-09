@@ -37,11 +37,14 @@ const Signin = () => {
         navigate('/admin')
     }
     else if(res.data.res.Role=="doctor"){
-      navigate("/doctorpage")
+      navigate("/doctor")
     }
     else if(res.data.res.Role=="employee")
     {
-      navigate("/employeepage")
+      navigate("/employee")
+    }
+    else if(res.data.res.Role==="recetion"){
+      navigate("/reception")
     }
   
    }else{
