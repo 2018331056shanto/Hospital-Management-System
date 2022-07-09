@@ -67,6 +67,14 @@
     background-color: transparent;
 
 }
+.status{
+    background-color: red;
+
+}
+.status:hover{
+    cursor: pointer;
+    
+}
 .link:hover{
     color: rgb(83, 138, 0);
 }

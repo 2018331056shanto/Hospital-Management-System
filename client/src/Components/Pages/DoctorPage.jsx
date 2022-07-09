@@ -28,7 +28,7 @@ const DoctorPage = () => {
   return (
     <div className={styles.container}>
       <NavbarLogin/>
-         <DoctorProfile/>
+        <DoctorProfile/>
     </div>
   );
 };

@@ -47,8 +47,7 @@ function App() {
         <Routes>
           <Route path="/" exect element={<LandingPage/>}/>
           <Route path="/patient" exact element={<PateintPage />} />
-          <Route path="/doctor" exact element={<LoginPage data={dataHandler}/>} />
-          <Route path="/employee" exact element={<LoginPage data={dataHandler}/>} />
+          <Route path="/login" exact element={<LoginPage data={dataHandler}/>} />
           <Route path="/admin" element={<> <Admin/>,<Wraper ><Dashboard/></Wraper></>} />
           <Route path="admin/dashboard" exact element={<> <Admin/>,<Wraper ><Dashboard/></Wraper></>} />
           <Route path="admin/doctor" exect element={<> <Admin/>,<Wraper ><Doctor/></Wraper></>} />
@@ -67,8 +66,8 @@ function App() {
           <Route path="/services" exact element={<Services/>} />
           <Route path="/aboutus" exact element={<AboutUs/>} />
           <Route path="/contact" exact element={<Contact/>} />
-          <Route path="/doctorpage" exact element={<Wraper ><DoctorPage/></Wraper>} />
-          <Route path="/employeepage" exact element={<Wraper><EmployeePage/></Wraper>} />
+          <Route path="/doctor" exact element={<Wraper ><DoctorPage/></Wraper>} />
+          <Route path="/employee" exact element={<Wraper><EmployeePage/></Wraper>} />
           <Route path="/logout" exact element={<LoginPage/>}/>
         </Routes>
         </UserContext.Provider>

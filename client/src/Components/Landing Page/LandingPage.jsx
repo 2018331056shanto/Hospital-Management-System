@@ -13,10 +13,10 @@ const LandingPage = () => {
       <h1 >You Are A... </h1>
       <div className={styles.container1}>
       <div>
-      <Link to="/doctor">
+      <Link to="/login">
       <img className={styles.image}src={doctor} alt="s"/>
       </Link>
-        <h2>Doctor</h2>
+        <h2>Doctor & Staff</h2>
       </div>
       <div>
         <Link to="/patient">
@@ -25,14 +25,7 @@ const LandingPage = () => {
         <h2>Patient</h2>
       </div>
       </div>
-      <Link to="/employee">
-      <div className={styles.container2}>
-       
-        <img className={styles.image} alt="s" src={employee} />
-        
-      </div>
-      </Link>
-      <h2>Empolyee</h2>
+     
     </react.Fragment>
   );
 };
