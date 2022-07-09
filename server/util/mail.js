@@ -17,7 +17,7 @@ const {google} =require('googleapis');
 };
 
 
- module.exports.mailSender = async() =>  {
+ module.exports.mailSender = async(email) =>  {
     console.log("x1");
     const oauth2client = new google.auth.OAuth2(process.env.CLIENT_ID,process.env.CLIENT_SECRET,process.env.REDIRECT_URI);
 oauth2client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
@@ -43,8 +43,37 @@ oauth2client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
         console.log(error.message)
     }
    // console.log("fuccck you")
+   
     // console.log(transport)
-    return transport;
+    try{
+
+         transport.sendMail({
+           from:'ashraful1185058@gmail.com',
+           to:email,
+           subject:'Account Verification',
+           html:`<h1>Your account has been Verified</h1>`
+       },(err,info)=>{
+
+
+           if(err)
+           {
+               console.log("error in approve")
+               console.log(err)
+   
+           }
+           else{
+               console.log("approve info")
+               console.log(info)
+           }
+       })
+   
+      
+   }
+   catch(err){
+       console.log(err);
+
+   }
+        
 };
 //generateToken();
 //mailSender();
