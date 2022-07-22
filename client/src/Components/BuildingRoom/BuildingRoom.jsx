@@ -14,7 +14,7 @@ const BuildingRoom=(props)=>{
         
     </div>
     <div>
-        {auth=="admin"?<form><span className={styles.text}><span>Building</span><input className={styles.shiftAdmin} value={props.buildingRoom.building} name="building" type="text"/><span className={styles.text}>Room</span><input className={styles.shiftAdmin} value={props.buildingRoom.room} name="room" type="text"/><input className={styles.text1} onClick={()=>clickHandler(props.id)} type="submit"/></span></form>:<span><span className={styles.text}>Building</span><span className={styles.shift}> {props.buildingRoom.building}</span><span className={styles.text}>Room</span><span className={styles.shift}> {props.buildingRoom.room}</span></span>}
+        {user.Role==="admin"?<form><span className={styles.text}><span>Building</span><input className={styles.shiftAdmin} value={props.buildingRoom.building} name="building" type="text"/><span className={styles.text}>Room</span><input className={styles.shiftAdmin} value={props.buildingRoom.room} name="room" type="text"/><input className={styles.text1} onClick={()=>clickHandler(props.id)} type="submit"/></span></form>:<span><span className={styles.text}>Building</span><span className={styles.shift}> {props.buildingRoom.building}</span><span className={styles.text}>Room</span><span className={styles.shift}> {props.buildingRoom.room}</span></span>}
         
           
     </div>

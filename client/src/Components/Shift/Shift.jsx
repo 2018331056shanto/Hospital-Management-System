@@ -14,7 +14,7 @@ const Shift=(props)=>{
         Shift
     </div>
     <div className={styles.container}>
-        {auth=="admin"?<form><span className={styles.text}><span>From</span><input className={styles.shiftAdmin} value={props.shift.from} name="from" type="time"/><span className={styles.text}>To</span><input className={styles.shiftAdmin} value={props.shift.to} name="to" type="time"/><input className={styles.text1} onClick={()=>clickHandler(props.id)} type="submit"/></span></form>:<span><span className={styles.text}>From</span><span className={styles.shift}> {props.shift.from}</span><span className={styles.text}>To</span><span className={styles.shift}> {props.shift.to}</span></span>}
+        {user.Role=="admin"?<form><span className={styles.text}><span>From</span><input className={styles.shiftAdmin} value={props.shift.from} name="from" type="time"/><span className={styles.text}>To</span><input className={styles.shiftAdmin} value={props.shift.to} name="to" type="time"/><input className={styles.text1} onClick={()=>clickHandler(props.id)} type="submit"/></span></form>:<span><span className={styles.text}>From</span><span className={styles.shift}> {props.shift.from}</span><span className={styles.text}>To</span><span className={styles.shift}> {props.shift.to}</span></span>}
         
           
     </div>
