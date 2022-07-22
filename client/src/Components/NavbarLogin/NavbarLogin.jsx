@@ -2,13 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../../UserContext";
 import styles from "./NavbarLogin.module.css"
-<<<<<<< HEAD
-// import {AdvancedImage} from '@cloudinary/react';
-// import {Cloudinary} from "@cloudinary/url-gen";
-=======
 import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
->>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 const NavbarLogin=(props)=>{
     const user=useContext(UserContext)
     console.log(user.Image)
@@ -24,19 +19,11 @@ if(!user.token)
         navigate("/doctor")
     }
     },[])
-<<<<<<< HEAD
-    // const cld=new Cloudinary({
-    //     cloud:{
-    //       cloudName:"dkacz3eix"
-    //     }
-    //   })
-=======
     const cld=new Cloudinary({
         cloud:{
           cloudName:"dkacz3eix"
         }
       })
->>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
     return(
         <nav className={styles.container}>
             <div className={styles.innerContainer}>

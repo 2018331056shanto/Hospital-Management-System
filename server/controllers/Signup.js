@@ -10,14 +10,14 @@ const { application } = require("express");
 const JWT_secret = 'fuckShantoHard';
 module.exports=signup=async(req,res)=>{
     const {username, password, email, confirmPassword, sex, file,role,image} = req.body
-    // const uploadedImage=await cloudinary.uploader.upload(file,{
-    //   upload_preset:"my_upload",
-    //   allowed_formats:["pdf","jpg","jpeg","png"]
-    // },(err,result)=>{
-    //   if(err)
-    //   throw err
-    //   // console.log(result)
-    // })
+    const uploadedImage=await cloudinary.uploader.upload(file,{
+      upload_preset:"my_upload",
+      allowed_formats:["pdf","jpg","jpeg","png"]
+    },(err,result)=>{
+      if(err)
+      throw err
+      // console.log(result)
+    })
     try{
       // res.status(200).json(uploadedImage)
 
