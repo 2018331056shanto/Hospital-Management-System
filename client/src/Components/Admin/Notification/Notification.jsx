@@ -35,9 +35,7 @@ useEffect(()=>{
                      <div className={styles.text}>Sex
                  <div className={styles.text1}>{el.Sex}</div>
                      </div>
-                     <div className={styles.text}>Role
-                     <div className={styles.text1}>{el.Role}</div>
-                     </div>
+                     
                      <div className={styles.text}>
                          Document
                          <div  className={styles.view}>
