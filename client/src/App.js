@@ -50,7 +50,6 @@ function App() {
     setUserState(data)
   }
   const user=userState;
-  console.log(user.Role)
   return (
     <BrowserRouter>
 

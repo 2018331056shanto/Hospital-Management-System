@@ -16,6 +16,7 @@ const Signup=()=>{
     const [fileReg,setFile]=useState("");
     const[file,setFiles]=useState("")
     const location=useLocation()
+    let role=location.pathname.split("/")[1]
     const signup = async(e)=>{
        
         e.preventDefault();
@@ -26,7 +27,7 @@ const Signup=()=>{
             confirmPassword: confirmPasswordReg,
             sex: sexReg,
             file: file,
-            role:null,
+            role:role,
             image:"https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
         })
        

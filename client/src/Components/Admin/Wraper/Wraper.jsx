@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
-import { UserContext } from "../../../UserContext";
+import React from "react";
 import styles from "./Wraper.module.css"
-const Wraper=(props)=>{
-    const user=useContext(UserContext)
+const wraper=(props)=>{
+  
+const auth=localStorage.getItem("auth")
     return( 
-        <div className={user.Role==="admin"?styles.wraper:styles.wrap2}>
+        <div className={auth==="admin"?styles.wraper:styles.wrap2}>
             { props.children}
         </div>
     )
    
 }
-export default Wraper;
+export default wraper;
