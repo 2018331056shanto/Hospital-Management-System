@@ -22,8 +22,23 @@ import EmployeeProfile from "./Components/Profile/EmployeeProfile/EmployeeProfil
 import Employee from "./Components/Admin/Employee/Employee";
 import Patients from "./Components/Admin/Patients/Patients";
 import InfoUpdate from "./Components/InfoUpdate/InfoUpdate";
+import UserEmployeeProfile from "./Components/Pages/UserEmployeeProfile";
 import { createContext, useEffect, useState } from "react";
 import { UserContext } from "./UserContext";
+import PatientPage from "./Components/Pages/PatientPage";
+import UserDoctorPage from "./Components/Pages/UserDoctorPage";
+import DoctorDetails from "./Components/Pages/DoctorDetails";
+import BloodBank from "./Components/Pages/BloodBank";
+import ChemoTherapy from "./Components/Pages/ChemoTherapy";
+import DiabetesCenter from "./Components/Pages/DiabetesCenter";
+import Emergency from "./Components/Pages/Emergency";
+import Pharmacy from "./Components/Pages/Pharmacy";
+import Physiotherapy from "./Components/Pages/Physiotherapy";
+import PrayerRoom from "./Components/Pages/PrayerRoom";
+import Counseling from "./Components/Pages/Counseling";
+import RoomCategory from "./Components/Pages/Room Category";
+import StrokeCenter from "./Components/Pages/StrokeCenter";
+import Vaccination from "./Components/Pages/Vaccination";
 import Notification from "./Components/Admin/Notification/Notification";
 import DocumentView from "./Components/Admin/Notification/DocumentView/DocumentView"
 function App() {
@@ -67,8 +82,27 @@ function App() {
           <Route path="/services" exact element={<Services/>} />
           <Route path="/aboutus" exact element={<AboutUs/>} />
           <Route path="/contact" exact element={<Contact/>} />
-          <Route path="/doctor" exact element={<Wraper ><DoctorPage/></Wraper>} />
-          <Route path="/employee" exact element={<Wraper><EmployeePage/></Wraper>} />
+          <Route path="/doctorpage" exact element={<Wraper user={userState}><DoctorPage/></Wraper>} />
+          <Route path="/doctorprofile" exact element={<UserDoctorPage/>}/>
+          <Route path="/doctorpage" exact element={<Wraper ><DoctorPage/></Wraper>} />
+          <Route path="/employeepage" exact element={<Wraper><EmployeePage/></Wraper>} />
+          <Route path="/logout" exact element={<LoginPage/>}/>
+          <Route path='/employeeprofile' exact element={<UserEmployeeProfile/>}/>
+          <Route path='patient/:doctordetails/:Id' exact element={<DoctorDetails/>}/>
+          <Route path="services/bloodbank" exact element={<BloodBank/>}/>
+          <Route path="/chemotherapy" exact element={<ChemoTherapy/>}/>
+          <Route path="/diabetescenter" exact element={<DiabetesCenter/>}/>
+          <Route path="/emergency" exact element={<Emergency/>}/>
+          <Route path="/pharmacy" exact element={<Pharmacy/>}/>
+          <Route path="/physiotherapy" exact element={<Physiotherapy/>}/>
+          <Route path="/prayerroom" exact element={<PrayerRoom/>}/>
+          <Route path="/counseling" exact element={<Counseling/>}/>
+          <Route path="/roomcategory" exact element={<RoomCategory/>}/>
+          <Route path="/strokecenter" exact element={<StrokeCenter/>}/>
+          <Route path="/vaccination" exact element={<Vaccination/>}/>
+          
+          <Route path="/doctorpage" exact element={<Wraper ><DoctorPage/></Wraper>} />
+          <Route path="/employeepage" exact element={<Wraper><EmployeePage/></Wraper>} />
           <Route path="/logout" exact element={<LoginPage/>}/>
         </Routes>
         </UserContext.Provider>

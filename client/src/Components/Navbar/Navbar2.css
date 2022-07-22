@@ -1,0 +1,40 @@
+.div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #184e77;
+    /* height: 5vh; */
+}
+.div3{
+    display: flex;
+    align-items: center;
+    /* width: 50%; */
+    /* justify-content:  space-between; */
+
+    
+}
+.div3 a{
+    text-decoration: none;
+    color: white;
+    margin-right: 1rem;
+}
+.div2 h3{
+   margin-left: 1rem;
+    color: white;
+}
+.dropdown_list{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: aquamarine;
+    /* display: flex;
+    flex-direction: column; */
+    z-index: 100;
+}
+.active{
+    color: white;
+    padding-bottom: .25rem;
+    border-bottom: 4px solid white;
+    background: none;
+}

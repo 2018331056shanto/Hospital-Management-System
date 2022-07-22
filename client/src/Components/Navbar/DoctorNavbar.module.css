@@ -1,0 +1,26 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #184e77;
+}
+.paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hname{
+    margin-left: 1rem;
+    color: white;
+}
+
+.logout{
+    margin-right: 1rem;
+    text-decoration: none;
+    color:white
+}
+.profile{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: white;
+}

@@ -3,13 +3,27 @@ const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const express=require("express")
+<<<<<<< HEAD
+// const cloudinary=require("../util/Cloudinary")
+=======
 const cloudinary=require("../util/Cloudinary")
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 const user = require("../models/User");
 var jwt = require('jsonwebtoken');
 const { application } = require("express");
 const JWT_secret = 'fuckShantoHard';
 module.exports=signup=async(req,res)=>{
     const {username, password, email, confirmPassword, sex, file,role,image} = req.body
+<<<<<<< HEAD
+    // const uploadedImage=await cloudinary.uploader.upload(file,{
+    //   upload_preset:"my_upload",
+    //   allowed_formats:["pdf","jpg","jpeg","png"]
+    // },(err,result)=>{
+    //   if(err)
+    //   throw err
+    //   // console.log(result)
+    // })
+=======
     const uploadedImage=await cloudinary.uploader.upload(file,{
       upload_preset:"my_upload",
       allowed_formats:["pdf","jpg","jpeg","png"]
@@ -18,6 +32,7 @@ module.exports=signup=async(req,res)=>{
       throw err
       // console.log(result)
     })
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
     try{
       // res.status(200).json(uploadedImage)
 

@@ -27,7 +27,7 @@ const Overlay = ({ setOpenModalAppointment}) => {
 
   const appointment = async(e)=>{
     e.preventDefault();
-    const res= await Axios.post("http://localhost:4000/appointmentInfo",{
+    const res= await Axios.post("http://localhost:4000/appointmentinfo",{
       name: patientName,
       email: patientEmail,
       phone: patientPhone,

@@ -2,7 +2,11 @@ const express=require("express")
 const app=express();
 const db=require("../config/CreateConnection")
 const User=require("../models/User")
+<<<<<<< HEAD
+const Department=require("../models/Department")
+=======
 const Dept=require("../models/Dept")
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 const Shift=require("../models/Shift")
 const Record =require("../models/Record")
 const PatientInfo= require("../models/PatientInfo")
@@ -10,7 +14,11 @@ const Fees=require("../models/Fees")
 const Facilities=require("../models/Facilities")
 const DuplicateUser=require("../models/DuplicateUser")
 const DuplicateUserInfo=require("../models/DuplicateUserInfo")
+<<<<<<< HEAD
+const Degrees = require("../models/Degrees");
+=======
 const Degrees=require("../models/Degrees")
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 const Cost=require("../models/Cost")
 const Conversation=require("../models/Conversation")
 const ConversationReply=require("../models/ConversationReply")
@@ -36,7 +44,11 @@ module.exports=createDatabase=async(req,res)=>{
     //     throw err;
     //     console.log("user created")
     // })
+<<<<<<< HEAD
+    db.query(Department,(err,result)=>{
+=======
     db.query(Dept,(err,result)=>{
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
         if(err)
         throw err;
         console.log("user created")

@@ -1,0 +1,24 @@
+.bloodbank {
+  background-color: #e5e5e5;
+}
+
+.bloodbank1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  margin-right: 15rem;
+  margin-left: 15rem;
+  margin-top: 2rem;
+  /* background-color: white; */
+}
+.caseQuestionExp {
+  margin-top: 4rem;
+  background-color: #e5e5e5;
+}
+.p {
+  padding: 2rem;
+  margin: 2rem;
+}
+.heading {
+  margin-top: 2rem;
+}
